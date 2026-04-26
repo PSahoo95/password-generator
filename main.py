@@ -7,7 +7,7 @@ def generate_password():
     name = request.args.get("name")
 
     if not name:
-        return jsonify({"error": "Name parameter is required."}), 400
+        return jsonify({"error": "Name parameter is mandatory."}), 400
     
     pwd = f"{name}123"
     return jsonify({"password": pwd})
